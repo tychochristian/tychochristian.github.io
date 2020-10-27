@@ -1,11 +1,12 @@
 'use strict';
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var
+  gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  browserSync = require('browser-sync').create();
+
 var src = './src/scss/**/*.scss';
 var build = './build';
-
-// sass.compiler = require('node-sass');
 
 function scss() {
   return (
@@ -14,12 +15,22 @@ function scss() {
       .pipe(sass())
       .on("error", sass.logError)
       .pipe(gulp.dest(build))
+      .pipe(browserSync.stream())
   );
+}
+
+function serve() {
+  browserSync.init({
+    server: "./"
+  });
+  gulp.watch(src, scss);
+  gulp.watch("./**/*").on('change', browserSync.reload);
 }
 
 function watch(){
   gulp.watch(src, scss)
 }
 
+exports.serve = serve;
 exports.scss = scss;
 exports.watch = watch;

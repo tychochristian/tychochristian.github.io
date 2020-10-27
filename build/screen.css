@@ -1,18 +1,48 @@
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0); }
+  50% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(0); } }
+
 html,
 body {
   margin: 0;
   padding: 0; }
 
 body {
-  background-color: #f2f2f2;
-  font-family: sans-serif;
+  background-color: #080E1F;
+  font-family: Roboto, sans-serif;
   padding: 2rem; }
 
-.card {
-  border-radius: 1rem;
-  background-color: white;
-  padding: 4rem;
-  text-align: center; }
+header {
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 0 auto; }
 
 h1 {
-  color: #333; }
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.6125;
+  margin-bottom: 2.5rem; }
+  h1 span {
+    color: white; }
+  h1 span.wave {
+    display: inline-block; }
+    h1 span.wave:hover {
+      animation: wave-animation 0.2s;
+      animation-iteration-count: 5; }
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: 0.2s;
+  background-color: #2039CC; }
+  .button:hover {
+    background-color: #192DA1; }
+  .button:focus {
+    box-shadow: 0 0 0 0.5rem rgba(32, 57, 204, 0.2); }

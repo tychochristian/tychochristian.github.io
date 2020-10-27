@@ -1,3 +1,22 @@
+$--color-purple-900: #080E1F;
+$--color-purple-800: #0C154A;
+$--color-purple-700: #111E6C;
+$--color-purple-600: #192DA1;
+$--color-purple-500: #2039CC;
+$--color-purple-100: #f6f7fe;
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -5,18 +24,51 @@ body {
 }
 
 body {
-  background-color: #f2f2f2;
-  font-family: sans-serif;
+  background-color: $--color-purple-900;
+  font-family: Roboto, sans-serif;
   padding: 2rem;
 }
 
-.card {
-  border-radius: 1rem;
-  background-color: white;
-  padding: 4rem;
-  text-align: center;
+header {
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 h1 {
-  color: #333;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.6125;
+  margin-bottom: 2.5rem;
+
+  span {
+    color: white;
+  }
+
+  span.wave {
+    display: inline-block;
+
+    &:hover {
+      animation: wave-animation 0.2s;
+      animation-iteration-count: 5;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: 0.2s;
+  background-color: $--color-purple-500;
+
+  &:hover {
+    background-color: $--color-purple-600;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.5rem rgba($--color-purple-500, 0.2);
+  }
 }
