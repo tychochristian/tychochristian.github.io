@@ -39,6 +39,7 @@ h1 {
   color: rgba(255, 255, 255, 0.4);
   line-height: 1.6125;
   margin-bottom: 2.5rem;
+  font-size: 2rem;
 
   span {
     color: white;
@@ -58,7 +59,7 @@ h1 {
   display: inline-block;
   text-decoration: none;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 2rem;
   font-weight: 500;
   transition: 0.2s;
@@ -70,5 +71,12 @@ h1 {
 
   &:focus {
     box-shadow: 0 0 0 0.5rem rgba($--color-purple-500, 0.2);
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 1.5rem;
   }
 }
