@@ -1,5 +1,5 @@
 # tychochristian.github.io
-This is my personal profile page that is hosted on GitHub pages. Visit at [tychochristian.github.io](tychochristian.github.io).
+This is my personal profile page that is hosted on GitHub pages. Visit at [tychochristian.github.io](https://tychochristian.github.io/).
 
 ## Development
 To run this repo run using Yarn, run:
