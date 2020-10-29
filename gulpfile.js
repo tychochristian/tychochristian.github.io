@@ -19,16 +19,16 @@ function scss() {
   );
 }
 
+function watch(){
+  gulp.watch(src, scss)
+}
+
 function serve() {
   browserSync.init({
     server: "./"
   });
   gulp.watch(src, scss);
   gulp.watch("./**/*").on('change', browserSync.reload);
-}
-
-function watch(){
-  gulp.watch(src, scss)
 }
 
 exports.serve = serve;
